@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmark</title>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/all.min.css">
+
+
+
+
+
+
+
+
+</head>
+
+<body>
+
+
+    <div class="vh-100 d-flex justify-content-center py-2 my-2">
+        <div class="container ">
+
+            <h1 class="text-center py-5">Bookmarker</h1>
+
+            <div class="container pt-3  dots">
+                <h2 class="text-center py-2 mb-3"><i class="fa-solid fa-bookmark "></i> Bookmark your favorite sites <i
+                        class="fa-solid fa-bookmark"></i></h2>
+                <label class="text-start py-1 mt-2" for="websiteName"><i class="fa-solid fa-book-bookmark"></i> Site
+                    Name</label>
+                <input type="text" class="form-control mb-4" id="websiteName" placeholder="Bookmark Name"
+                    oninput="validationName()">
+
+
+                <label class="text-start py-1" for="websiteURL"><i class="fa-solid fa-link"></i> Site URL</label>
+                <input type="text" class="form-control" id="websiteURL" placeholder="Website URL"
+                    oninput="validationURL()">
+                <div class="d-flex justify-content-center">
+                    <button onclick="addWebsite()" class="btn btn-danger my-4 px-5 ">Submit</button>
+                </div>
+                <div class="container bg-white rounded-3 px-4 position-absolute shadow d-none" id="alertDiv">
+                    <div class="">
+                        <div class="d-flex justify-content-between py-3">
+                            
+                            <div class="text-start ">
+                                <i class="fa-solid fa-circle text-danger"></i><i
+                                    class="fa-solid fa-circle ps-1 text-warning"></i><i
+                                    class="fa-solid fa-circle ps-1 text-success"></i>
+                            </div>
+                            <div ><i class="fa-solid fa-xmark fs-4 " onclick="dnone()"></i></div>
+
+                        </div>
+                        <h3 class="h5 py-2 ">Site Name or Url is not valid, Please follow the rules below :</h3>
+                        <p><i class="fa-regular fa-circle-right text-danger pe-1"></i>Site name must contain at least 3
+                            characters</p>
+                        <p class="pb-2"><i class="fa-regular fa-circle-right text-danger pe-1"></i>Site URL must be a
+                            valid one</p>
+                    </div>
+                </div>
+
+            </div>
+            <table class="table mt-4">
+                <thead>
+                    <tr class="text-center">
+                        <th>Index</th>
+                        <th>Website Name</th>
+                        <th>Visit</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody id="dataTable">
+                </tbody>
+
+            </table>
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,83 @@
+body {
+    background-color: #f7ecde;
+}
+
+.dots {
+    border-top: 2px dotted black;
+    border-bottom: 2px dotted black;
+}
+
+:root {
+    --font1: "Righteous", sans-serif;
+    --font2: "Pacifico", cursive;
+    --font3: "PT Sans Caption", sans-serif;
+}
+
+h1 {
+    font-family: var(--font2);
+    font-weight: 500;
+    font-size: 50px;
+    color: #352e28;
+    position: relative;
+    width: fit-content;
+    margin: auto;
+}
+
+h1::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 12%;
+    left: 0;
+    bottom: 50px;
+    background-color: #fec260;
+    transition: all 0.5s;
+    z-index: -1;
+}
+
+h1:hover::before {
+    height: 25%;
+}
+
+
+
+h2 {
+    font-family: var(--font1);
+    font-weight: 500;
+    font-size: 25px;
+    background: linear-gradient(to right, #3ca55c, #b5ac49);
+    width: fit-content;
+    margin: auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+label {
+    font-family: var(--font3);
+    font-weight: 600;
+    font-size: 16px;
+    color: #212529;
+}
+
+input {
+    font-family: var(--font3);
+}
+
+.form-control:focus {
+    color: #212529;
+    background-color: #fff;
+    border-color: #d99c39;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem #fec26055;
+}
+
+th {
+    font-family: var(--font3);
+    font-weight: 700;
+    font-size: 16px;
+}
+
+a{text-decoration: none;color: white;}
+#alertDiv{width: 35%;left: 33%;top: 33%;}
+#alertDiv h3{font-family: var(--font3);font-size: 21px;font-weight: 600;}
+#alertDiv p{font-family: var(--font3);font-size: 18px;font-weight: 400;}
